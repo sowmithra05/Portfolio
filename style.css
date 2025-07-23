@@ -1,1 +1,99 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #f9fafb;            
+  --text: #1f2937;          /* Soft black */
+  --accent: #4f46e5;        /* Brighter Indigo (Tailwind Indigo-600) */
+  --card: #ffffff;          /* True white cards */
+  --border: #d1d5db;        /* Light gray borders */
+}
+
+
+body.dark {
+  --bg: #121212;
+  --text: #e2e8f0;
+  --accent: #00d4ff;
+  --card: #1e1e3f;
+  --border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#themeToggle {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--card);
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section {
+  background: var(--card);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
