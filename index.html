@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sowmithra J — Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Page loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-bar"></div>
+    <span class="loader-text">Initializing<span class="loader-dots">...</span></span>
+  </div>
+</div>
+
+<!-- Particle Canvas -->
+<canvas id="particleCanvas"></canvas>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a class="logo" href="#home">
+    <span class="logo-bracket">[</span>SJ<span class="logo-bracket">]</span>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link" data-index="00">Home</a></li>
+    <li><a href="#about" class="nav-link" data-index="01">About</a></li>
+    <li><a href="#skills" class="nav-link" data-index="02">Skills</a></li>
+    <li><a href="#experience" class="nav-link" data-index="03">Experience</a></li>
+    <li><a href="#projects" class="nav-link" data-index="04">Projects</a></li>
+    <li><a href="#certifications" class="nav-link" data-index="05">Certs</a></li>
+    <li><a href="#contact" class="nav-link" data-index="06">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button id="menuToggle" class="icon-btn mobile-only" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+  <ul>
+    <li><a href="#home" class="drawer-link">Home</a></li>
+    <li><a href="#about" class="drawer-link">About</a></li>
+    <li><a href="#skills" class="drawer-link">Skills</a></li>
+    <li><a href="#experience" class="drawer-link">Experience</a></li>
+    <li><a href="#projects" class="drawer-link">Projects</a></li>
+    <li><a href="#certifications" class="drawer-link">Certifications</a></li>
+    <li><a href="#education" class="drawer-link">Education</a></li>
+    <li><a href="#contact" class="drawer-link">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal-up">
+      <span class="dot-pulse"></span>
+      <span class="mono">Available for Opportunities</span>
+    </div>
+
+    <div class="hero-identity reveal-up delay-1">
+      <div class="profile-wrapper">
+        <div class="profile-ring"></div>
+        <img src="profile.jpg" alt="Sowmithra J" class="profile-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 fill=%22%23dbeafe%22/><text font-size=%2280%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22 fill=%22%230369a1%22 font-family=%22Syne,sans-serif%22 font-weight=%22800%22>SJ</text></svg>'">
+      </div>
+      <h1 class="hero-name">
+        <span class="name-first">Sowmithra J</span>
+        
+      </h1>
+    </div>
+
+    <div class="hero-role reveal-up delay-2">
+      <span class="role-prefix mono">~/Interests:</span>
+      <span id="typingText" class="typing-output"></span>
+      <span class="cursor-blink">|</span>
+    </div>
+
+    <p class="hero-bio reveal-up delay-3">
+      Computer Science & Engineering student passionate about <em>Software Development</em>,
+      <em>DevOps</em>, <em>Cloud Computing</em>, and Artificial Intelligence.
+    </p>
+
+   
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="mono scroll-text">scroll</span>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item reveal-up">
+      <span class="stat-num" data-target="8.57" data-decimal="2">0</span>
+      <span class="stat-label">CGPA</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up delay-1">
+      <span class="stat-num" data-target="4">0</span>
+      <span class="stat-label">Internships</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up delay-2">
+      <span class="stat-num" data-target="4">0</span>
+      <span class="stat-label">Major Projects</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item reveal-up delay-3">
+      <span class="stat-num" data-target="12">0</span>
+      <span class="stat-label">Certifications</span>
+      <span class="stat-plus">+</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">01 — About</span>
+    <h2 class="section-title">Who I Am</h2>
+  </div>
+
+  <div class="about-grid">
+    
+    <div class="about-text reveal-left">
+      <p class="about-lead">
+        A highly motivated Computer Science student building at the intersection of
+        <strong>Software Engineering</strong> and <strong>Intelligent Systems</strong>.
+      </p>
+
+      <p>
+        Passionate about full-stack development, cloud-native architectures, and AI-driven applications.
+        I turn ideas into production-ready systems — from designing microservices to deploying
+        containerized infrastructure with real-time observability.
+      </p>
+
+      <p>
+        I learn by building. Every project in my portfolio is a story of a problem solved
+        and a skill acquired.
+      </p>
+    </div>
+
+    <div class="about-tags reveal-right">
+      <div class="tag-cloud">
+        <span class="tag">Full-Stack Dev</span>
+        <span class="tag accent">DevOps</span>
+        <span class="tag">Cloud Computing</span>
+        <span class="tag accent">UI/UX</span>
+        <span class="tag">Data Mining</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section section-alt">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">02 — Skills</span>
+    <h2 class="section-title">Technologies</h2>
+  </div>
+
+  <div class="skills-layout">
+    <div class="skill-category reveal-up">
+      <div class="category-header">
+        <span class="category-icon"><i class="fas fa-code"></i></span>
+        <h3>Languages</h3>
+      </div>
+      <div class="skill-badges">
+        <span class="badge-tech">C</span>
+        <span class="badge-tech">C++</span>
+        <span class="badge-tech">Java</span>
+        <span class="badge-tech">Python</span>
+        <span class="badge-tech">JavaScript</span>
+      </div>
+    </div>
+
+    <div class="skill-category reveal-up delay-1">
+      <div class="category-header">
+        <span class="category-icon"><i class="fas fa-layer-group"></i></span>
+        <h3>Frontend</h3>
+      </div>
+      <div class="skill-badges">
+        <span class="badge-tech">HTML5</span>
+        <span class="badge-tech">CSS3</span>
+        <span class="badge-tech">React</span>
+      </div>
+    </div>
+
+    <div class="skill-category reveal-up delay-2">
+      <div class="category-header">
+        <span class="category-icon"><i class="fas fa-server"></i></span>
+        <h3>Backend</h3>
+      </div>
+      <div class="skill-badges">
+        <span class="badge-tech">Node.js</span>
+        <span class="badge-tech">Express.js</span>
+        <span class="badge-tech">FastAPI</span>
+      </div>
+    </div>
+
+    <div class="skill-category reveal-up">
+      <div class="category-header">
+        <span class="category-icon"><i class="fas fa-cloud"></i></span>
+        <h3>Cloud & DevOps</h3>
+      </div>
+      <div class="skill-badges">
+        <span class="badge-tech aws">AWS</span>
+        <span class="badge-tech azure">Azure</span>
+        <span class="badge-tech docker">Docker</span>
+        <span class="badge-tech k8s">Kubernetes</span>
+        <span class="badge-tech">Jenkins</span>
+        <span class="badge-tech">Prometheus</span>
+        <span class="badge-tech">Grafana</span>
+        <span class="badge-tech">InfluxDB</span>
+        <span class="badge-tech">Telegraf</span>
+        
+      </div>
+    </div>
+
+    <div class="skill-category reveal-up delay-1">
+      <div class="category-header">
+        <span class="category-icon"><i class="fas fa-database"></i></span>
+        <h3>Databases</h3>
+      </div>
+      <div class="skill-badges">
+        <span class="badge-tech mongo">MongoDB</span>
+        <span class="badge-tech mysql">MySQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="section">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">03 — Experience</span>
+    <h2 class="section-title">Internships</h2>
+  </div>
+
+  <div class="timeline-wrapper">
+    <div class="timeline-spine"></div>
+
+    <div class="timeline-entry reveal-left featured-entry">
+      <div class="tl-dot featured-dot"></div>
+      <div class="tl-card featured-card">
+        <div class="tl-badge">Featured</div>
+        <div class="tl-header">
+          <h3>HPE Career Preview Program</h3>
+          <span class="tl-tag">Enterprise</span>
+        </div>
+        <p class="tl-project">Schema-Driven Private Cloud Digital Twin</p>
+        <p class="tl-desc">Built a comprehensive cloud digital twin using FastAPI with JWT authentication, containerized via Docker & Kubernetes (k3d), and fully observed through Prometheus, Grafana, Telegraf and InfluxDB stack.</p>
+        <div class="tl-tech">
+          <span>FastAPI</span><span>JWT</span><span>Docker</span><span>k3d</span><span>Prometheus</span><span>Grafana</span><span>Telegraf</span><span>InfluxDB</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-entry reveal-right">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <h3>Earthonomic Engineers</h3>
+          <span class="tl-tag">Mobile</span>
+        </div>
+        <p class="tl-desc">Developed a Flutter-based Android Energy Audit Application for real-time energy monitoring and reporting.</p>
+        <div class="tl-tech"><span>Flutter</span><span>Android</span><span>Dart</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-entry reveal-left">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <h3>AWS Cloud Virtual Internship</h3>
+          <span class="tl-tag">Cloud</span>
+        </div>
+        <p class="tl-desc">Deep dive into AWS cloud computing concepts — EC2, S3, IAM, VPC, Lambda and managed services architecture.</p>
+        <div class="tl-tech"><span>AWS EC2</span><span>S3</span><span>IAM</span><span>Lambda</span></div>
+      </div>
+    </div>
+
+    <div class="timeline-entry reveal-right">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <h3>ShadowFox Web Dev Internship</h3>
+          <span class="tl-tag">Frontend</span>
+        </div>
+        <p class="tl-desc">Built a responsive portfolio website and an IPL community platform with real-time features and modern UI.</p>
+        <div class="tl-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section section-alt">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">04 — Projects</span>
+    <h2 class="section-title">Featured Work</h2>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card reveal-up featured-project">
+      <div class="project-glow"></div>
+      <div class="project-number mono">01</div>
+      <div class="project-content">
+        <h3>FitCircle</h3>
+        <p class="project-type">MERN Stack + DevOps Platform</p>
+        <p>Full-stack fitness community platform with complete DevOps pipeline — CI/CD via Jenkins, containerized with Docker, orchestrated by Kubernetes, and monitored through Prometheus & Grafana dashboards.</p>
+        <div class="project-stack">
+          <span>MongoDB</span><span>Express</span><span>React</span><span>Node.js</span>
+          <span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>Grafana</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/sowmithra05" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal-up delay-1">
+      <div class="project-number mono">02</div>
+      <div class="project-content">
+        <h3>AI Social Media Intelligence</h3>
+        <p class="project-type">ML Platform</p>
+        <p>Machine learning platform analyzing social behaviour with XGBoost classification, DBSCAN clustering and Apriori association mining, served via Flask API.</p>
+        <div class="project-stack">
+          <span>Python</span><span>XGBoost</span><span>Flask</span><span>DBSCAN</span><span>Apriori</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/sowmithra05" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal-up delay-2">
+      <div class="project-number mono">03</div>
+      <div class="project-content">
+        <h3>Spare Parts Inventory</h3>
+        <p class="project-type">Enterprise System</p>
+        <p>Role-based inventory management system with real-time analytics dashboard, automated reorder alerts, and supplier management workflows.</p>
+        <div class="project-stack">
+          <span>React</span><span>Node.js</span><span>MySQL</span><span>REST API</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/sowmithra05" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal-up delay-3">
+      <div class="project-number mono">04</div>
+      <div class="project-content">
+        <h3>Sweet Delights</h3>
+        <p class="project-type">E-Commerce Platform</p>
+        <p>Complete sweet shop management system with cart, payment integration, customer feedback module, and advanced pre-booking functionality.</p>
+        <div class="project-stack">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span><span>MongoDB</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/sowmithra05" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications" class="section">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">05 — Certifications</span>
+    <h2 class="section-title">Credentials</h2>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert-card reveal-up" data-issuer="aws">
+      <div class="cert-logo aws-logo"><i class="fab fa-aws"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">AWS Academy</span>
+        <h4>Cloud Foundations</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-1" data-issuer="aws">
+      <div class="cert-logo aws-logo"><i class="fab fa-aws"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">AWS Academy</span>
+        <h4>Cloud Architecting</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-2" data-issuer="coursera">
+      <div class="cert-logo coursera-logo"><i class="fas fa-graduation-cap"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Coursera</span>
+        <h4>DevOps Prerequisite</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-3" data-issuer="coursera">
+      <div class="cert-logo coursera-logo"><i class="fas fa-graduation-cap"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Coursera</span>
+        <h4>Docker Basics for DevOps</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up" data-issuer="coursera">
+      <div class="cert-logo coursera-logo"><i class="fas fa-graduation-cap"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Coursera</span>
+        <h4>Git Basics for DevOps</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-1" data-issuer="coursera">
+      <div class="cert-logo coursera-logo"><i class="fas fa-graduation-cap"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Coursera</span>
+        <h4>Jenkins Basics for DevOps</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-2" data-issuer="coursera">
+      <div class="cert-logo coursera-logo"><i class="fas fa-graduation-cap"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Coursera</span>
+        <h4>Kubernetes Basics for DevOps</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-3" data-issuer="infosys">
+      <div class="cert-logo infosys-logo"><i class="fas fa-building"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Infosys Springboard</span>
+        <h4>HTML5 – The Language</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up" data-issuer="infosys">
+      <div class="cert-logo infosys-logo"><i class="fas fa-building"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Infosys Springboard</span>
+        <h4>Introduction to ER Modeling</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-1" data-issuer="infosys">
+      <div class="cert-logo infosys-logo"><i class="fas fa-building"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Infosys Springboard</span>
+        <h4>Database and SQL</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-2" data-issuer="simplilearn">
+      <div class="cert-logo simplilearn-logo"><i class="fas fa-certificate"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Simplilearn</span>
+        <h4>Introduction to Software Testing</h4>
+      </div>
+    </div>
+    <div class="cert-card reveal-up delay-3" data-issuer="simplilearn">
+      <div class="cert-logo simplilearn-logo"><i class="fas fa-certificate"></i></div>
+      <div class="cert-info">
+        <span class="cert-issuer">Simplilearn</span>
+        <h4>Agile Scrum Master</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education" class="section section-alt">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">06 — Education</span>
+    <h2 class="section-title">Academic Path</h2>
+  </div>
+
+  <div class="edu-timeline">
+    <div class="edu-card reveal-left">
+      <div class="edu-icon"><i class="fas fa-university"></i></div>
+      <div class="edu-body">
+        <h3>B.E Computer Science and Engineering</h3>
+        <p class="edu-institution">Kumaraguru College of Technology</p>
+        <div class="edu-meta">
+          <span class="edu-cgpa">CGPA: <strong>8.57</strong></span>
+          <span class="edu-year">2022 — 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-card reveal-right">
+      <div class="edu-icon"><i class="fas fa-school"></i></div>
+      <div class="edu-body">
+        <h3>Higher Secondary Education</h3>
+        <p class="edu-institution">Tamil Nadu State Board</p>
+        <div class="edu-meta">
+          <span class="edu-cgpa">Score: <strong>584/600 (97.33%)</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <div class="section-header reveal-up">
+    <span class="section-label mono">07 — Contact</span>
+    <h2 class="section-title">Let's Build Together</h2>
+  </div>
+
+  <p class="contact-intro reveal-up">
+    Open to Software Development, DevOps, and Cloud opportunities —
+    internships, placements, collaborations, or just a good tech conversation.
+  </p>
+
+  <div class="contact-grid">
+
+    <!-- Email -->
+    <a href="mailto:jaganathansowmithra@gmail.com" class="contact-card reveal-up">
+      <div class="contact-icon">
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-type">Email</span>
+        <span class="contact-value">jaganathansowmithra@gmail.com</span>
+      </div>
+      <i class="fas fa-arrow-up-right contact-arrow"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/sowmithra-j-32a310296/" target="_blank" class="contact-card reveal-up delay-2">
+      <div class="contact-icon">
+        <i class="fab fa-linkedin"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-type">LinkedIn</span>
+        <span class="contact-value">sowmithra-j-32a310296</span>
+      </div>
+      <i class="fas fa-arrow-up-right contact-arrow"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/sowmithra05" target="_blank" class="contact-card reveal-up delay-3">
+      <div class="contact-icon">
+        <i class="fab fa-github"></i>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-type">GitHub</span>
+        <span class="contact-value">sowmithra05</span>
+      </div>
+      <i class="fas fa-arrow-up-right contact-arrow"></i>
+    </a>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-bracket">[</span>SJ<span class="logo-bracket">]</span>
+    </div>
+    <p class="footer-copy mono">© 2026 Sowmithra J — All Rights Reserved</p>
+    <div class="footer-socials">
+      <a href="https://github.com/sowmithra05" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sowmithra-j-32a310296/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:jaganathansowmithra@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
