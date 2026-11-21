@@ -180,11 +180,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   if (!el) return;
 
   const roles = [
-    'Software Developer',
-    'Cloud Enthusiast',
-    'DevOps Enthusiast',
-  ];
-
+  "Full-Stack Development",
+  "Software Development",
+  "DevOps & Cloud Computing",
+  "Data Engineering",
+  "Data Analytics",
+  "Artificial Intelligence & Machine Learning"
+];
   let roleIdx = 0, charIdx = 0, deleting = false;
 
   function type() {
